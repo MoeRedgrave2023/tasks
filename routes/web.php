@@ -5,8 +5,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+use App\Http\Controllers\CustomAuthController;
 
-Auth::routes();
+Route::get('/login', [CustomAuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [CustomAuthController::class, 'login']);
+Route::get('/signup', [CustomAuthController::class, 'showSignupForm'])->name('signup');
+Route::post('/signup', [CustomAuthController::class, 'signup']);
+
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
