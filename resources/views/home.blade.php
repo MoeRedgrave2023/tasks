@@ -8,9 +8,8 @@
             </div>
         @endif
 
-        {{ __('You are logged in!') }}
-
+        <a href="{{ route('contact') }}" class="btn btn-primary">Contact Us</a>
         
-        @include('login')
+        <p class="mt-3">{{ $usersWithMessagesCount }} users have sent a message.</p>
     </div>
 @endsection

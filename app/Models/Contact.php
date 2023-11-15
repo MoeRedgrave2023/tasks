@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class Contact extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'question1', 'question2'];
+    protected $fillable = ['name', 'email', 'message', 'user_id'];
 }
